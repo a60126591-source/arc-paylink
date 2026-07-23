@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0a1224" />
+  <title>ArcPayLink — Payment Requests on Arc</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">BUILT ON ARC TESTNET</div>
+        <h1>ArcPayLink</h1>
+        <p>Create and settle transparent USDC payment requests onchain.</p>
+      </div>
+      <button id="connectButton" class="primary">Connect wallet</button>
+    </header>
+
+    <section class="statusbar">
+      <span id="networkStatus">Arc Testnet</span>
+      <span id="walletStatus">Wallet not connected</span>
+      <a id="contractLink" href="#" target="_blank" rel="noreferrer">View contract</a>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Create request</h2>
+        <label>Recipient address<input id="recipient" placeholder="0x..." /></label>
+        <label>Amount (USDC)<input id="amount" type="number" min="0" step="0.01" placeholder="1.00" /></label>
+        <label>Title<input id="title" maxlength="80" placeholder="Design invoice" /></label>
+        <label>Memo<textarea id="memo" maxlength="280" placeholder="Optional details"></textarea></label>
+        <button id="createButton" class="primary">Create payment request</button>
+      </article>
+
+      <article class="card">
+        <h2>Pay request</h2>
+        <label>Request ID<input id="payId" type="number" min="0" placeholder="0" /></label>
+        <button id="loadPayButton" class="secondary">Load request</button>
+        <div id="payPreview" class="preview muted">Load a request to see its details.</div>
+        <button id="payButton" class="primary" disabled>Pay exact amount</button>
+      </article>
+
+      <article class="card full">
+        <h2>Inspect request</h2>
+        <div class="inline">
+          <input id="inspectId" type="number" min="0" placeholder="Request ID" />
+          <button id="inspectButton" class="secondary">Inspect</button>
+        </div>
+        <pre id="inspectOutput">No request loaded.</pre>
+      </article>
+    </section>
+
+    <section class="about">
+      <h2>Stablecoin-native by design</h2>
+      <p>Arc uses native USDC for gas. ArcPayLink keeps the payment amount, recipient, status, payer, and timestamps verifiable onchain while forwarding settled funds directly to the recipient.</p>
+    </section>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
