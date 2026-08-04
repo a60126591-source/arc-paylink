@@ -1,54 +1,45 @@
 # ArcPayLink
 
-ArcPayLink is a stablecoin-native payment request dApp for Arc Testnet. Users create a request with a recipient, amount, title, and memo; another wallet settles it using Arc's native USDC gas token.
+ArcPayLink is a simple USDC payment flow built on Arc Testnet, designed to make crypto payments easier for users and merchants.
 
-## Features
+## Overview
 
-- Create transparent payment requests
-- Exact-amount settlement in native testnet USDC
-- Direct forwarding to the recipient
-- Creator-controlled cancellation
-- Double-payment protection and reentrancy guard
-- Onchain events and readable request state
-- Mobile-friendly static frontend
-- One-command phone/Codespaces deployment
+ArcPayLink focuses on reducing friction in Web3 payments by creating a smoother experience for requesting and completing USDC payments.
 
-## Fast deployment from a phone
+The goal is to make crypto payments feel closer to traditional payment experiences while keeping the benefits of blockchain.
 
-1. Open this repository in GitHub Codespaces.
-2. In the terminal, run:
+## Current Features
 
-```bash
-bash scripts/start-phone.sh
-```
+- Wallet connection
+- Create USDC payment requests
+- Generate payment links
+- Transparent payment flow
+- Arc Testnet integration
 
-3. When the script shows a testnet wallet address, open the Circle Faucet, select **Arc Testnet**, request test USDC, return to the terminal, and press Enter.
+## Roadmap
 
-The script builds and tests the contract, deploys it, attempts verification, creates and pays a demo request, updates the frontend configuration, writes `DEPLOYMENT.md` and `SUBMISSION.md`, and pushes non-secret files to GitHub.
+- Improve wallet payment experience
+- Add merchant payment flows
+- Payment tracking and management
+- Better onboarding for Web2 users
+- Expand toward scalable payment infrastructure
+
+## Tech Stack
+
+- React
+- Vite
+- Arc Testnet
+- USDC
+- Smart contracts
 
 ## Network
 
 - Network: Arc Testnet
-- Chain ID: `5042002`
-- RPC: `https://rpc.testnet.arc.network`
-- Native currency: USDC (18 decimals)
-- Explorer: `https://testnet.arcscan.app`
+- Chain ID: 5042002
 
-## Security
+## Status
 
-The generated `.wallet.env` is for testnet only and is excluded by `.gitignore`. Never send real assets to the generated wallet and never publish its private key.
-
-## Contract interface
-
-- `createRequest(recipient, amount, title, memo)`
-- `payRequest(requestId)`
-- `cancelRequest(requestId)`
-- `getRequest(requestId)`
-- `nextRequestId()`
-
-## Frontend
-
-The static dApp is in `web/`. After deployment, enable GitHub Pages with **GitHub Actions** as the source. The included workflow publishes the site automatically.
+Working prototype / Testnet build
 
 ## License
 
