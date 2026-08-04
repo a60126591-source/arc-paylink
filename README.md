@@ -41,6 +41,11 @@ The goal is to make crypto payments feel closer to traditional payment experienc
 
 Working prototype / Testnet build
 
+## Demo
+
+Live demo:
+https://upgraded-space-chainsaw-gx5qj5w67pq6hjrr-5173.app.github.dev/
+
 ## License
 
 MIT
