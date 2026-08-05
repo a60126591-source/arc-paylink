@@ -7,7 +7,9 @@ ArcPayLink is a simple USDC payment flow built on Arc Testnet, designed to make 
 ArcPayLink focuses on reducing friction in Web3 payments by creating a smoother experience for requesting and completing USDC payments.
 
 The goal is to make crypto payments feel closer to traditional payment experiences while keeping the benefits of blockchain.
+## Demo Preview
 
+![ArcPayLink Demo](Screenshot_20260805_010812.png)
 ## Current Features
 
 - Wallet connection
