@@ -19,7 +19,7 @@ https://testnet.arcscan.app/address/0xC281b0F1c9Bc32eee1cDE0f8603E57767052AA28
 https://testnet.arcscan.app/tx/0xa93b62ce1b1a696de50a5e5394affd20b5fb92290af725828103682e784bb1f4
 
 ## Demo state
-Payment request ID 0 was created and paid on Arc Testnet.
+A complete payment flow was tested on Arc Testnet: a payment request was created, settled using USDC, and the transaction was successfully recorded on-chain.
 
 ## Feedback requested
 Feedback on product direction, payment-request UX, and useful extensions such as expirations, partial payments, reusable links, and merchant analytics.
